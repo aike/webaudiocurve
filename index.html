@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@aike1000" />
+    <meta name="twitter:image" content="https://aikelab.net/webaudiocurve/thumb.png" />
+    <meta property="og:url" content="https://aikelab.net/webaudiocurve/" />
+    <meta property="og:title" content="Web Audio Curve Visualizer" />
+    <meta property="og:description" content="Visualize Web Audio API automation curve" />
+    <meta property="og:image" content="https://aikelab.net/webaudiocurve/thumb.png" />
+
+    <script type="text/javascript" src="graph.js"></script>
+    <script type="text/javascript" src="soundgenerator.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Web Audio Curve Visualizer</title>
+  </head>
+  <body>
+    <canvas id="drawarea" width="640" height="480"></canvas>
+
+    <select name="algorithm" id="algorithm">
+      <option value="setValueAtTime">setTargetAtTime(endValue, ctx.currentTime + duration)</option>
+      <option value="linearRampToValueAtTime">linearRampToValueAtTime(endValue, ctx.currentTime + duration)</option>
+      <option value="exponentialRampToValueAtTime">exponentialRampToValueAtTime(endValue, ctx.currentTime + duration)</option>
+      <option value="setTargetAtTime" selected>setTargetAtTime(endValue, ctx.currentTime, duration)</option>
+      <option value="setValueCurveAtTime2">setValueCurveAtTime([startValue, endValue], ctx.currentTime, duration)</option>
+      <option value="setValueCurveAtTime4">setValueCurveAtTime([startValue, 0.2, 0.8, endValue], ctx.currentTime, duration)</option>
+    </select>
+    <div id="startvaluelabel">Start Value</div>
+    <input id="startvalue" type="number" name="startvalue" step="0.1" value="0.0" min="0" max="1">
+    <div id="endvaluelabel">End Value</div>
+    <input id="endvalue" type="number" name="endvalue" step="0.1" value="1.0" min="0" max="1">
+    <div id="durationlabel">Duration</div>
+    <input id="duration" type="number" name="duration" step="0.1" value="1.0" min="0.1" max="5">
+    <button id="play">play</button>
+  </body>
+</html>

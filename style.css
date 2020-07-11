@@ -1,0 +1,62 @@
+
+#algorithm {
+	position: absolute;
+	top: 50px;
+	left: 700px;
+	width: 600px;
+	height: 30px;
+	font-size: 16px;
+}
+
+#startvaluelabel {
+	position: absolute;
+	top: 100px;
+	left: 700px;
+	width: 100px;
+	text-align: right;
+}
+
+#startvalue {
+	position: absolute;
+	top: 100px;
+	left: 820px;
+	width: 60px;
+}
+
+#endvaluelabel {
+	position: absolute;
+	top: 130px;
+	left: 700px;
+	width: 100px;
+	text-align: right;
+}
+
+#endvalue {
+	position: absolute;
+	top: 130px;
+	left: 820px;
+	width: 60px;
+}
+
+#durationlabel {
+	position: absolute;
+	top: 160px;
+	left: 700px;
+	width: 100px;
+	text-align: right;
+}
+
+#duration {
+	position: absolute;
+	top: 160px;
+	left: 820px;
+	width: 60px;
+}
+
+#play {
+	position: absolute;
+	top: 220px;
+	left: 780px;
+	width: 100px;
+	height: 50px;
+}
